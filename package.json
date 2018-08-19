@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-ex",
+  "name": "newchess",
   "version": "0.0.1",
   "description": "Node.js sample app for OpenShift 3",
   "main": "server.js",
@@ -23,12 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/sclorg/nodejs-ex.git"
+    "url": "http://github.com/lebrisg/newchess.git"
   },
-  "author": "Steve Speicher <sspeiche@gmail.com>",
+  "author": "Gilles LE BRIS <lebrisg@hotmail.com>",
   "license": "CC-BY-1.0",
   "bugs": {
-    "url": "http://github.com/sclorg/nodejs-ex/issues"
+    "url": "http://github.com/lebrisg/newchess/issues"
   },
-  "homepage": "http://github.com/sclorg/nodejs-ex"
+  "homepage": "http://github.com/lebrisg/newchess"
 }
