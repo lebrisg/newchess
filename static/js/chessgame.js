@@ -1,10 +1,10 @@
 $(document).ready(function() {
-//initiated socket client
+// initiated socket client
 var socket = io();                                  
-//join room as defined by query parameter in URL bar
+// join room as defined by query parameter in URL bar
 socket.emit('join', getParameterByName('gameid'));  
 
-//remote move by peer
+// remote move by peer
 socket.on('move', function(moveObj){ 
   console.log('peer move: ' + JSON.stringify(moveObj));
   var move = game.move(moveObj);
@@ -33,7 +33,7 @@ var onDragStart = function(source, piece, position, orientation) {
 };
 
 var onDrop = function(source, target) {
-    //move object
+    // move object
     var moveObj = ({
       from: source,
       to: target,
