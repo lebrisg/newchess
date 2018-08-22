@@ -3,7 +3,9 @@ $(document).ready(function() {
 var socket = io();                                  
 // join room as defined by query parameter in URL bar
 #socket.emit('join', getParameterByName('gameid'));  
-socket.emit('join', getRoom());  
+var room = getRoom();
+console.log('Room: ' + room);
+socket.emit('join', room());  
 
 // remote move by peer
 socket.on('move', function(moveObj){ 
