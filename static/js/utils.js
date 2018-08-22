@@ -1,5 +1,5 @@
-//get URL parameter by name, see:
-//http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+// get URL parameter by name, see:
+// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),

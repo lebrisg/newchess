@@ -129,6 +129,18 @@ io.on('connection', function(socket){
 
 //module.exports = app ;
 
+function getRoom() {
+  if (rooms == []) {
+    rooms[0] = ["White0", "Black0"];
+    return 0;
+  }
+  rooms[rooms.length] = ["White"+rooms.length, "Black"+rooms.length];
+  return rooms.length;
+}
+
+// Initialization
+var rooms = [];
+
 // run http and web socket server
 var server = http.listen(port, function () { 
   var host = server.address().address;
