@@ -3,8 +3,8 @@ $(document).ready(function() {
 var socket = io();                                  
 // join room as defined by query parameter in URL bar
 socket.emit('join', getParameterByName('gameid'));  
-var room = getRoom();
-console.log('Room: ' + room);
+//var room = getRoom();
+//console.log('Room: ' + room);
 // socket.emit('join', room());  
 
 // remote move by peer
@@ -21,7 +21,7 @@ socket.on('move', function(moveObj){
 
 var board,
   game = new Chess(),
-  roomE1 = $('#room'),
+//  roomE1 = $('#room'),
   statusEl = $('#status'),
   fenEl = $('#fen'),
   pgnEl = $('#pgn');
@@ -88,7 +88,7 @@ var updateStatus = function() {
     }
   }
 
-  roomE1.html(rooms.length-1);
+//  roomE1.html(rooms.length-1);
   statusEl.html(status);
   fenEl.html(game.fen());
   pgnEl.html(game.pgn());
