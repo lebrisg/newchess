@@ -143,7 +143,8 @@ var rooms = [];
 
 // run http and web socket server
 var server = http.listen(port, function () { 
-  var host = server.address().address;
+#  var host = server.address().address;
+  var host = ip;
   var port = server.address().port;
   console.log('Server listening at address ' + host + ', port ' + port);
 });
