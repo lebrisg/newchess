@@ -8,7 +8,7 @@ var express = require('express'),
 Object.assign=require('object-assign')
 
 //app.engine('html', require('ejs').renderFile);
-//app.use(morgan('combined'))
+app.use(morgan('combined'))
 
 app.use(express.static(__dirname + '/static/'));
 
