@@ -19,6 +19,7 @@ socket.on('move', function(moveObj){
 
 var board,
   game = new Chess(),
+  roomE1 = $('#room'),
   statusEl = $('#status'),
   fenEl = $('#fen'),
   pgnEl = $('#pgn');
@@ -85,6 +86,7 @@ var updateStatus = function() {
     }
   }
 
+  roomE1.html(rooms.length-1);
   statusEl.html(status);
   fenEl.html(game.fen());
   pgnEl.html(game.pgn());
