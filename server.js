@@ -1,4 +1,4 @@
-//  OpenShift Node application
+// OpenShift Node application
 var express = require('express'),
     app     = express(),
     http    = require('http').Server(app),
@@ -81,18 +81,18 @@ var initDb = function(callback) {
 //  }
 //});
 
-//host client @ base url
+// host client @ base url
 app.get('/', function (req, res) { 
     res.render('index.html')
 });
 
-//join room on connect
+// join room on connect
 io.on('connection', function(socket){ 
   socket.on('join', function(room) {
     socket.join(room);
     console.log('user joined room: ' + room);
   });
-  //move object emitter
+  // move object emitter
   socket.on('move', function(move) { 
     console.log('user moved: ' + JSON.stringify(move));
     io.emit('move', move);
@@ -129,7 +129,7 @@ io.on('connection', function(socket){
 
 //module.exports = app ;
 
-//run http and web socket server
+// run http and web socket server
 var server = http.listen(port, function () { 
   var host = server.address().address;
   var port = server.address().port;
